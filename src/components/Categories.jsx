@@ -6,7 +6,7 @@ const Categories = (props) => {
     <div id="categories" data-testid="categoryList">
       {props.categories.map(item=>(
        
-          <Category category={item}/>
+          <Category key={item.id} category={item} {...props}/>
         
        
         

@@ -6,8 +6,9 @@ const Gameboard = (props) => {
     <div
       data-testid="gameboard"
       id={props.currentQuestion.question ? "question" : "gameboard"}
-    >This is my Game board
-      <Categories {...props}/>
+    >
+    {props.currentQuestion.question ? props.currentQuestion.question : <Categories {...props}/>}
+      
       
       {/* No? Show Categories */}
     </div>
